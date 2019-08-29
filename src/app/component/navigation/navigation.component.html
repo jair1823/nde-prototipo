@@ -1,1 +1,38 @@
-<p>navigation works!</p>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand font-weight-bold" routerLink="/">Escuela</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto font-weight-bold">
+            <li class="nav-item active">
+                <a class="nav-link" routerLink="/home">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/groups">Avisos</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Personal
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item font-weight-bold" routerLink="/executives">Junta de Educacion</a>
+                    <a class="dropdown-item font-weight-bold" routerLink="/teachers">Docentes</a>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/gallery">Galeria</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/contact">Contacto</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/users">Usuarios</a>
+            </li>
+        </ul>
+    </div>
+</nav>
