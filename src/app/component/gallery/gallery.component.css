@@ -1,0 +1,22 @@
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev {
+  display: block;
+}
+
+.my_container{
+    height:80vmin;
+    width:80vmin;
+}
+
+#gallery{
+    height:80vmin;
+    width:80vmin;
+}
+
+.image_settings img{
+    width: auto;
+    height: 80vmin;
+    max-height: 80vmin;
+    max-width: 80vmin;
+}
