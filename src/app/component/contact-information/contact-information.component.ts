@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactInformationComponent implements OnInit {
 
+  /* esto es para dar la ubicación exacta de la escuela*/
+  lat = 9.911337;
+  lng = -84.056983;
   constructor() { }
 
   ngOnInit() {

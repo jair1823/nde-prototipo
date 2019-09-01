@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand font-weight-bold" routerLink="/">Escuela</a>
+    <a class="navbar-brand font-weight-bold" routerLink="/">Escuela Digital</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -7,31 +7,34 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto font-weight-bold">
-            <li class="nav-item" routerLinkActive="active">
-                <a class="nav-link" routerLink="/home">Inicio</a>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/home" routerLinkActive="active">Inicio</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/groups">Avisos</a>
+                <a class="nav-link" routerLink="/groups" routerLinkActive="active">Avisos</a>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
+            <!-- Con este routerLinkActive arreglo el problema de el dropdown -->
+            <li class="nav-item dropdown" [routerLinkActive]="['active']">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false" routerLinkActive="active">
                     Personal
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item font-weight-bold" routerLink="/executives">Junta de Educacion</a>
-                    <a class="dropdown-item font-weight-bold" routerLink="/teachers">Docentes</a>
+                    <a class="dropdown-item font-weight-bold" routerLink="/executives" routerLinkActive="active">Junta
+                        de Educacion</a>
+                    <a class="dropdown-item font-weight-bold" routerLink="/teachers"
+                        routerLinkActive="active">Docentes</a>
                 </div>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" routerLink="/gallery">Galeria</a>
+                <a class="nav-link" routerLink="/gallery" routerLinkActive="active">Galeria</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/contact">Contacto</a>
+                <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contacto</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/users">Usuarios</a>
+                <a class="nav-link" routerLink="/users" routerLinkActive="active">Usuarios</a>
             </li>
         </ul>
     </div>
