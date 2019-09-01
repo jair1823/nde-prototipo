@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { AgmCoreModule } from '@agm/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContactInformationComponent } from './component/contact-information/contact-information.component';
@@ -34,7 +34,10 @@ import { UserLoginComponent } from './component/user-login/user-login.component'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAmHbK8wxJ6KS-fzKRBQIsTTSZkqxaGyks'
+    })/* key de Google Maps */
   ],
   providers: [],
   bootstrap: [AppComponent]

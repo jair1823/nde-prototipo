@@ -1,8 +1,32 @@
-<div class="row mt-3 mx-1">
-    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 bg-warning">
-        <h1>contact-information works!</h1>
+<div class="row mt-3 mx-3">
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 text-center" style="height: 82vh">
+        <div class="card " style="height: 78vh">
+            <div class="card-header">
+                <h4 class="card-title">Información de Contacto</h4>
+            </div>
+            <div class="container mt-2">
+                <div class="w-100 border border-dark">
+                    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="18">
+                        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+                    </agm-map>
+                </div>
+                <a href="https://www.google.com/maps/place/Escuela+Rep%C3%BAblica+Dominicana/@9.9112463,-84.0569227,21z/data=!4m5!3m4!1s0x0:0xc6792a2cc55520d3!8m2!3d9.9113391!4d-84.0569561"
+                    target="black">Ver en maps.</a>
+            </div>
+            <div class="card-body mt-3 overflow-auto">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Dirección: Del palo de mango 500 metros sur.</li>
+                    <li class="list-group-item">2525-3654 / 7525-3654</li>
+                    <li class="list-group-item">Correo: escuela@escuelita.com</li>
+                    <!-- <li class="list-group-item">Item 3</li>
+                    <li class="list-group-item">Item 3</li> -->
+                </ul>
+            </div>
+            <!-- <div class="card-footer"></div> -->
+
+        </div>
     </div>
-    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 bg-dark overflow-auto" style="height: 80vh">
+    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 overflow-auto" style="height: 82vh">
         <app-feedback-form></app-feedback-form>
     </div>
 </div>
