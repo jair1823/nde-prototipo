@@ -1,20 +1,19 @@
-.carousel-item.active,
-.carousel-item-next,
-.carousel-item-prev {
-  display: block;
-}
-
 .my_container{
     height:80vmin;
     width:80vmin;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-#gallery{
+.pic_holder .div_holder{
     height:80vmin;
     width:80vmin;
+
 }
 
-.image_settings img{
+.pic_holder img{
     width: auto;
     height: 80vmin;
     max-height: 80vmin;

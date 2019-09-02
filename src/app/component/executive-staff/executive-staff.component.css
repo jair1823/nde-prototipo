@@ -1,0 +1,24 @@
+.my_container{
+    display:table;
+    margin: 0 auto;
+    padding:0;
+    margin-top: 2vmin;
+}
+
+.card{
+    padding-bottom: 2vmin;
+    padding-top: 2vmin;
+}
+
+.pic_holder img{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    max-height: 25vmin;
+    max-width: 35vmin;
+}
