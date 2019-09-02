@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./group-news.component.css']
 })
 export class GroupNewsComponent implements OnInit {
-
+  profesor: string = "profesor";
   constructor() { }
 
   ngOnInit() {
+  }
+
+  foo() {
+    this.profesor = "juan"
   }
 
 }

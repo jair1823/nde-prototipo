@@ -1,1 +1,24 @@
-<p>group-new works!</p>
+<!-- <div class="container"> -->
+
+<div class="card mb-3">
+    <div class="card-header">
+        <h4 class="card-title text-capitalize"> {{aviso.title}} </h4>
+    </div>
+
+    <div class="card-body">
+        <h5 class="card-title">Publicado por: <span class="text-capitalize"> {{aviso.author}} </span> </h5>
+        <p class="card-text">
+            {{aviso.description}}
+        </p>
+
+        <div class="bg-dark text-white w-75 mx-auto text-center" style="height: 30vh">
+            <h1>IMAGENS</h1>
+        </div>
+
+    </div>
+
+    <div class="card-footer text-right">
+        <small class="form-text text-muted ">{{aviso.date}}</small>
+    </div>
+
+</div>
