@@ -1,5 +1,5 @@
 <div class="row mt-3 mx-3">
-    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 first-col">
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 first-col ">
         <div><br></div>
         <div class="card">
             <div class="card-header">
@@ -49,20 +49,22 @@
             </div>
             <div class="card-footer"><br></div>
         </div>
+
+
     </div>
-    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 mt-3" style="height: 82vh">
-        <div class="container-fluid mb-2 text-right">
-            <button class="btn btn-outline-info">Nuevo Aviso</button>
-
-        </div>
-        <div class="container-fluid mb-2">
+    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 " style="height: 82vh">
+        <!-- <div class="container-fluid mb-2">
             <h4>Noticias de la seccion:</h4>
+        </div> -->
+
+        <div class="container-fluid overflow-auto border" style="height: 76vh">
+
+            <app-group-new></app-group-new>
+            <app-group-new></app-group-new>
+
         </div>
-        <div class="container-fluid overflow-auto" style="height: 78vh">
-
-            <app-group-new></app-group-new>
-            <app-group-new></app-group-new>
-
+        <div class="container-fluid mb-3 mt-3 text-right mb-5">
+            <button class="btn btn-info">Nuevo Aviso</button>
         </div>
 
     </div>

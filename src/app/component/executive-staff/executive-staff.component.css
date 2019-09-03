@@ -5,7 +5,7 @@
     margin-top: 2vmin;
 }
 
-.card{
+.card-1{
     padding-bottom: 2vmin;
     padding-top: 2vmin;
 }
@@ -21,4 +21,12 @@
     height: auto;
     max-height: 25vmin;
     max-width: 35vmin;
+}
+
+.first-col {
+    height: 82vh;
+}
+
+.second-col {
+    height: 82vh;
 }
