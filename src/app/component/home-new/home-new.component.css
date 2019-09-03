@@ -1,8 +1,8 @@
-.my_container{
+/* .my_container{
     display:table;
     margin: 0 auto;
     margin-top: 2vmin;
-}
+} */
 
 .card{
     padding-bottom: 3vmin;
@@ -14,6 +14,6 @@
     margin: auto;
     width: auto;
     height: auto;
-    max-height: 50vmin;
+    max-height: 30vmin;/*para que no se expanda mucho en la altura*/
     max-width: 50vw;
 }
