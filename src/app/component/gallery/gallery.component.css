@@ -1,7 +1,9 @@
 .my_container{
     height:80vmin;
     width:80vmin;
+    padding: 3.5vmin;
     position: absolute;
+    z-index: -1;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -10,7 +12,6 @@
 .pic_holder .div_holder{
     height:80vmin;
     width:80vmin;
-
 }
 
 .pic_holder img{
