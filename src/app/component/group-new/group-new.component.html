@@ -1,18 +1,21 @@
 <!-- <div class="container"> -->
 
-<div class="card mb-3">
+<div class="card mb-3" *ngFor="let aviso of avisos" >
     <div class="card-header">
+        
         <h4 class="card-title text-capitalize"> {{aviso.title}} </h4>
     </div>
 
     <div class="card-body">
+        <p class="card-title text-muted">Sección: <span class="text-capitalize"> {{aviso.section}} </span> </p>
         <h5 class="card-title">Publicado por: <span class="text-capitalize"> {{aviso.author}} </span> </h5>
         <p class="card-text">
             {{aviso.description}}
         </p>
 
-        <div class="bg-success text-white w-75 mx-auto text-center" style="height: 30vh">
-            <h1>IMG</h1>
+        <div class="pic_holder">
+            <img [src]="aviso.img"
+                class="card-img-top">
         </div>
 
     </div>
