@@ -16,6 +16,7 @@ import { TeacherStaffComponent } from './component/teacher-staff/teacher-staff.c
 import { GalleryComponent } from './component/gallery/gallery.component';
 import { UserLoginComponent } from './component/user-login/user-login.component';
 import { ProfessorUserComponent } from './component/professor-user/professor-user.component';
+import { ProfessorNavigationComponent } from './component/professor-navigation/professor-navigation.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ProfessorUserComponent } from './component/professor-user/professor-use
     TeacherStaffComponent,
     GalleryComponent,
     UserLoginComponent,
-    ProfessorUserComponent
+    ProfessorUserComponent,
+    ProfessorNavigationComponent
   ],
   imports: [
     BrowserModule,
