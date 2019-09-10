@@ -15,6 +15,7 @@ import { ExecutiveStaffComponent } from './component/executive-staff/executive-s
 import { TeacherStaffComponent } from './component/teacher-staff/teacher-staff.component';
 import { GalleryComponent } from './component/gallery/gallery.component';
 import { UserLoginComponent } from './component/user-login/user-login.component';
+import { ProfessorUserComponent } from './component/professor-user/professor-user.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { UserLoginComponent } from './component/user-login/user-login.component'
     ExecutiveStaffComponent,
     TeacherStaffComponent,
     GalleryComponent,
-    UserLoginComponent
+    UserLoginComponent,
+    ProfessorUserComponent
   ],
   imports: [
     BrowserModule,

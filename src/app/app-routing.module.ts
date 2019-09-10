@@ -7,6 +7,7 @@ import { TeacherStaffComponent } from './component/teacher-staff/teacher-staff.c
 import { GalleryComponent } from './component/gallery/gallery.component';
 import { UserLoginComponent } from './component/user-login/user-login.component';
 import { ContactInformationComponent } from './component/contact-information/contact-information.component';
+import { ProfessorUserComponent } from './component/professor-user/professor-user.component';
 
 
 const routes: Routes = [
@@ -43,6 +44,10 @@ const routes: Routes = [
     path:'users',
     component: UserLoginComponent
   },
+  {
+    path:'professor',
+    component:ProfessorUserComponent
+  }
 ];
 
 @NgModule({
