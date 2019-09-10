@@ -1,2 +1,79 @@
 <app-professor-navigation></app-professor-navigation>
-<p>professor-user works!</p>
+<div class="row mt-3 mx-3">
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 first-col" style="margin-left: 20vmin;">
+        <div><br></div>
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">Filtro</h2>
+            </div>
+            <br>
+            <div class="card-body my-3">
+                <ul class="list-group ">
+                    <li class="list-group-item mb-4">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="inputGroupSelect01">Nivel</label>
+                            </div>
+                            <select class="custom-select" id="inputGroupSelect0">
+                                <option selected>Choose...</option>
+                                <option value="1">Primero</option>
+                                <option value="2">Segundo</option>
+                                <option value="3">Tercero</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li class="list-group-item mb-4">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="inputGroupSelect01">Seccion</label>
+                            </div>
+                            <select class="custom-select" id="inputGroupSelect01">
+                                <option selected>Choose...</option>
+                                <option value="1">1-1</option>
+                                <option value="2">2-1</option>
+                                <option value="3">3-1</option>
+                            </select>
+                        </div>
+                    </li>
+                    <fieldset disabled>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Profesor lider</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="{{profesor}}">
+                        </div>
+                    </fieldset>
+                </ul>
+                <br>
+                <button class="btn btn-primary btn-block mt-3" (click)="foo()">Filtrar</button>
+            </div>
+            <div class="card-footer"><br>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 first-col" style="margin-left: 20vmin;">
+        <div class="card mt-3">
+            <div class="card-header">
+                <h2 class="card-title">Crear Noticia</h2>
+            </div>
+            <div class="card-body my-3">
+                <form>
+                    <div class="form-group">
+                        <input type="text" name="title" placeholder="Título de la noticia" class="form-control"
+                            autofocus style="margin-bottom: 5vmin;">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="description" placeholder="Descripción de la noticia" rows="4"
+                            class="form-control" style="margin-bottom: 5vmin;"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlFile1">Suba un archivo</label>
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1"
+                            style="margin-bottom: 5vmin;">
+                    </div>
+                    <button class="btn btn-primary btn-block">
+                        Publicar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
