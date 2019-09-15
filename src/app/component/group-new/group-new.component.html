@@ -1,27 +1,26 @@
 <!-- <div class="container"> -->
 
-<div class="card mb-3" *ngFor="let aviso of avisos" >
+<div class="card mb-3">
     <div class="card-header">
-        
-        <h4 class="card-title text-capitalize"> {{aviso.title}} </h4>
+
+        <h4 class="card-title text-capitalize"> {{new.title}} </h4>
     </div>
 
     <div class="card-body">
-        <p class="card-title text-muted">Sección: <span class="text-capitalize"> {{aviso.section}} </span> </p>
-        <h5 class="card-title">Publicado por: <span class="text-capitalize"> {{aviso.author}} </span> </h5>
+        <p class="card-title text-muted">Sección: <span class="text-capitalize"> {{new.section}} </span> </p>
+        <h5 class="card-title">Publicado por: <span class="text-capitalize"> {{new.author}} </span> </h5>
         <p class="card-text">
-            {{aviso.description}}
+            {{new.description}}
         </p>
 
         <div class="pic_holder">
-            <img [src]="aviso.img"
-                class="card-img-top">
+            <img [src]="new.img" class="card-img-top">
         </div>
 
     </div>
 
     <div class="card-footer text-right">
-        <small class="form-text text-muted ">{{aviso.date}}</small>
+        <small class="form-text text-muted ">{{new.date}}</small>
     </div>
 
 </div>

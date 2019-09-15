@@ -58,9 +58,9 @@
             <h4>Noticias de la seccion:</h4>
         </div> -->
 
-        <div class="container-fluid overflow-auto border" style="height: 76vh">
+        <div class="container-fluid overflow-auto pt-2" style="height: 76vh">
 
-            <app-group-new></app-group-new>
+            <app-group-new *ngFor="let new of news" [new]="new"></app-group-new>
             <!-- <app-group-new></app-group-new> -->
 
         </div>

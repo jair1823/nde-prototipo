@@ -8,6 +8,7 @@ import { GalleryComponent } from './component/gallery/gallery.component';
 import { UserLoginComponent } from './component/user-login/user-login.component';
 import { ContactInformationComponent } from './component/contact-information/contact-information.component';
 import { ProfessorUserComponent } from './component/professor-user/professor-user.component';
+import { AdminUserComponent } from './component/admin-user/admin-user.component';
 
 
 const routes: Routes = [
@@ -47,6 +48,10 @@ const routes: Routes = [
   {
     path:'professor',
     component:ProfessorUserComponent
+  },
+  {
+    path:'admin',
+    component:AdminUserComponent
   }
 ];
 
