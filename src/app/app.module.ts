@@ -17,7 +17,9 @@ import { GalleryComponent } from './component/gallery/gallery.component';
 import { UserLoginComponent } from './component/user-login/user-login.component';
 import { ProfessorUserComponent } from './component/professor-user/professor-user.component';
 import { ProfessorNavigationComponent } from './component/professor-navigation/professor-navigation.component';
-
+import { ReactiveFormsModule, FormsModule }  from '@angular/forms';
+import { AdminUserComponent } from './component/admin-user/admin-user.component';
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,14 +36,18 @@ import { ProfessorNavigationComponent } from './component/professor-navigation/p
     GalleryComponent,
     UserLoginComponent,
     ProfessorUserComponent,
-    ProfessorNavigationComponent
+    ProfessorNavigationComponent,
+    AdminUserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAmHbK8wxJ6KS-fzKRBQIsTTSZkqxaGyks'
-    })/* key de Google Maps */
+    })/* key de Google Maps */,
+    ReactiveFormsModule,
+    FormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

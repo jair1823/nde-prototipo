@@ -29,69 +29,22 @@
         </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 overflow-auto second-col">
-        <div class="card  mb-3">
+        
+        <div class="card mb-3 py-2" *ngFor="let e of executives">
             <div class="row">
                 <div class="col-md-4 pic_holder">
-                    <img src="https://pro2-bar-s3-cdn-cf4.myportfolio.com/3a227f4b9a8ebe035b7799961cc0c1e8/f26346e8-39cf-43bd-a8fd-cc4b4f20a99b_rw_1920.jpg?h=70be0465b99945d93718517e7636649c"
-                        class="card-img" alt="...">
+                    <img [src]="e.photo"
+                        class="card-img" alt="text-imagen">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">Marco Segura Matarrita</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-                            ducimus quia porro non ratione</p>
+                        <h5 class="card-title"> {{ e.name }} </h5>
+                        <p class="card-text"> {{ e.description }} </p>
                         <p class="card-text"><small class="text-muted">Miembro de la Junta Directiva</small></p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="card  mb-3">
-            <div class="row">
-                <div class="col-md-4 pic_holder">
-                    <img src="http://sites.psu.edu/iabcpennstate/wp-content/uploads/sites/18140/2015/01/professional-woman-4.jpg"
-                        class="card-img" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Elena Martínez Rojas</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-                            ducimus quia porro non ratione</p>
-                        <p class="card-text"><small class="text-muted">Miembro de la Junta Directiva</small></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card  mb-3">
-            <div class="row">
-                <div class="col-md-4 pic_holder">
-                    <img src="https://nadiazheng.com/wp-content/uploads/2017/01/Montreal-business-portrait-professional-accoutant-linkedin-profile.jpg"
-                        class="card-img" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Eduardo Ramírez Piedra</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-                            ducimus quia porro non ratione</p>
-                        <p class="card-text"><small class="text-muted">Miembro de la Junta Directiva</small></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card  mb-3">
-            <div class="row">
-                <div class="col-md-4 pic_holder">
-                    <img src="http://nadiazheng.com/wp-content/uploads/2015/12/Montreal-authentic-natural-professional-headshot.jpg"
-                        class="card-img" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Milena Brenes Astorga</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-                            ducimus quia porro non ratione</p>
-                        <p class="card-text"><small class="text-muted">Miembro de la Junta Directiva</small></p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
     </div>
 </div>
