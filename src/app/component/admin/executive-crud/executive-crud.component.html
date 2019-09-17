@@ -1,0 +1,28 @@
+<app-admin-navigation></app-admin-navigation>
+
+<div class="container my-2">
+    <div class="my-2">
+        <button routerLink="/admin/new-executive" class="btn btn-success ">Nuevo</button>
+    </div>
+
+    <div class="mb-5">
+        <div class="card mb-3 py-2" *ngFor="let e of executives">
+            <div class="row">
+                <div class="col-md-4 pic_holder">
+                    <img [src]="e.photo" class="card-img" alt="text-imagen">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title"> {{ e.name }} </h5>
+                        <p class="card-text"> {{ e.description }} </p>
+                        <p class="card-text"><small class="text-muted">Miembro de la Junta Directiva</small></p>
+                        <div class="">
+                            <button class="btn btn-warning">Editar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>

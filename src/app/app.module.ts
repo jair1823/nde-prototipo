@@ -15,10 +15,14 @@ import { ExecutiveStaffComponent } from './component/executive-staff/executive-s
 import { TeacherStaffComponent } from './component/teacher-staff/teacher-staff.component';
 import { GalleryComponent } from './component/gallery/gallery.component';
 import { UserLoginComponent } from './component/user-login/user-login.component';
-import { ProfessorUserComponent } from './component/professor-user/professor-user.component';
-import { ProfessorNavigationComponent } from './component/professor-navigation/professor-navigation.component';
+import { ProfessorUserComponent } from './component/professor/professor-user/professor-user.component';
+import { ProfessorNavigationComponent } from './component/professor/professor-navigation/professor-navigation.component';
 import { ReactiveFormsModule, FormsModule }  from '@angular/forms';
-import { AdminUserComponent } from './component/admin-user/admin-user.component';
+import { AdminUserComponent } from './component/admin/admin-user/admin-user.component';
+import { AdminNavigationComponent } from './component/admin/admin-navigation/admin-navigation.component';
+import { CreateProfessorComponent } from './component/admin/create-professor/create-professor.component';
+import { CreateSupervisorComponent } from './component/admin/create-supervisor/create-supervisor.component';
+import { ExecutiveCrudComponent } from './component/admin/executive-crud/executive-crud.component';
  
 @NgModule({
   declarations: [
@@ -37,7 +41,11 @@ import { AdminUserComponent } from './component/admin-user/admin-user.component'
     UserLoginComponent,
     ProfessorUserComponent,
     ProfessorNavigationComponent,
-    AdminUserComponent
+    AdminUserComponent,
+    AdminNavigationComponent,
+    CreateProfessorComponent,
+    CreateSupervisorComponent,
+    ExecutiveCrudComponent
   ],
   imports: [
     BrowserModule,

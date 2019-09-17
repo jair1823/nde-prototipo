@@ -11,7 +11,8 @@
                     <div class="form-group">
                         <label class="h4">Usuario</label>
                         <input type="text" class="form-control form-control-md" placeholder="username"
-                            [ngClass]="{ 'is-invalid': submitted && f.username.errors }" formControlName="username">
+                            [ngClass]="{ 'is-invalid': submitted && f.username.errors }" formControlName="username"
+                            autofocus>
                         <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
                             <div *ngIf="f.username.errors.required">El usuario es necesario</div>
                         </div>
