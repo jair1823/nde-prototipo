@@ -1,0 +1,125 @@
+<app-admin-navigation></app-admin-navigation>
+<div class="container">
+    <h4 class="my-2">Preview</h4>
+    <div class="card py-2">
+        <div class="row">
+            <div class="col-md-4 pic_holder">
+
+                <div class="col-md-4 pic_holder">
+                    <img *ngIf="professor.photo;" [src]="professor.photo" class="card-img" alt="text-img">
+                    <img *ngIf="!professor.photo;" src="https://static1.tme.eu/pics/icons/no-image-placeholder-big.png"
+                        alt="defaultImg">
+                </div>
+
+            </div>
+            <div class="col-md-8 ">
+                <div class="card-body ">
+                    <h5 class="card-title ">
+                        {{this.createForm.value.name +' '+ this.createForm.value.lastname1 +' '+ this.createForm.value.lastname2}}
+                    </h5>
+                    <p class="card-text "> {{this.createForm.value.description}} </p>
+                    <p class="card-text "><small class="text-muted"> {{this.createForm.value.email}} </small></p>
+                    <p class="card-text "><small class="text-muted">Docente</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h4>Data</h4>
+    <div class="card card-body mb-3">
+
+        <form [formGroup]="createForm" (ngSubmit)="create()">
+
+            <div class="form-row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                    <label class="font-weight-bold">Nombre</label>
+                    <input type="text" class="form-control" placeholder="Nombre" formControlName="name"
+                        [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+                    <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                        <div *ngIf="f.name.errors.required">El nombre es necesario.</div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                    <label class="font-weight-bold">Primer Apellido</label>
+                    <input type="text" class="form-control" placeholder="Primer Apellido" formControlName="lastname1"
+                        [ngClass]="{ 'is-invalid': submitted && f.lastname1.errors }">
+                    <div *ngIf="submitted && f.lastname1.errors" class="invalid-feedback">
+                        <div *ngIf="f.lastname1.errors.required">Es necesario.</div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4"><label class="font-weight-bold">Segundo
+                        Apellido</label>
+                    <input type="text" class="form-control" placeholder="Segundo Apellido" formControlName="lastname2"
+                        [ngClass]="{ 'is-invalid': submitted && f.lastname2.errors }">
+                    <div *ngIf="submitted && f.lastname2.errors" class="invalid-feedback">
+                        <div *ngIf="f.lastname2.errors.required">Es necesario.</div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="form-row ">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8 col-xl-8">
+                    <label class="font-weight-bold">Correo</label>
+                    <input type="text" class="form-control" placeholder="ejemplo@email.com" formControlName="email"
+                        [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required">El correo es necesario.</div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                    <label class="font-weight-bold">Cédula</label>
+                    <input type="text" class="form-control" placeholder="cédula" formControlName="dni"
+                        [ngClass]="{ 'is-invalid': submitted && f.dni.errors }">
+                    <div *ngIf="submitted && f.dni.errors" class="invalid-feedback">
+                        <div *ngIf="f.dni.errors.required">La cédula es necesaria.</div>
+                        <div *ngIf="f.dni.errors.maxlength || f.dni.errors.minlength || f.dni.errors.pattern">La cédula
+                            es incorrecta.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+
+                <label class="font-weight-bold">Descripción</label>
+                <textarea value="" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.description.errors}"
+                    rows="6" formControlName="description"></textarea>
+                <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
+                    <div *ngIf="f.description.errors.required">
+                        Debe escribir una descripción.
+                    </div>
+                    <div *ngIf="f.description.errors.maxlength">
+                        La descripción tiene un límite de 200 caracteres.
+                    </div>
+                </div>
+
+            </div>
+            <div class="form-group">
+
+
+            </div>
+
+            <div class="form-group">
+                <label class="font-weight-bold">Foto</label>
+                <input #file type="file" class="form-control-file form-control-md" accept='image/*'
+                    (change)="preview(file.files)" [ngClass]="{ 'text-danger': submitted && f.photo.errors }"
+                    formControlName="photo">
+                <small class="text-danger" *ngIf="message">{{message}}</small>
+                <div *ngIf="submitted && f.photo.errors" class="text-danger">
+                    <small *ngIf="f.photo.errors.required">Se debe subir una imagen.</small>
+                </div>
+            </div>
+
+
+
+            <button type="submit" class="btn btn-primary btn-block">Crear</button>
+        </form>
+
+
+
+
+
+    </div>
+
+
+
+</div>
