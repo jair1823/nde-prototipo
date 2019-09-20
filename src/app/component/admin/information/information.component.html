@@ -1,0 +1,73 @@
+<app-admin-navigation></app-admin-navigation>
+<div class="container-fluid mb-5">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12x col-md-6 col-lg-6 col-xl-6">
+            <h3 class="mt-2">Descripción</h3>
+            <div class="card card-body">
+                <textarea rows="10">{{description}}</textarea>
+                <div class="text-center mt-3">
+                    <button class="btn btn-outline-success">Actualizar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12x col-md-6 col-lg-6 col-xl-6">
+            <h3 class="mt-2">Contacto</h3>
+            <div class="card card-body">
+                <form>
+                    <div class="form-group">
+                        <label>Teléfono</label>
+                        <input type="text" class="form-control" [value]="contactInformation.phone1">
+                    </div>
+                    <div class="form-group">
+                        <label>Celular</label>
+                        <input type="text" class="form-control" [value]="contactInformation.phone2">
+                    </div>
+                    <div class="form-group">
+                        <label>Correo</label>
+                        <input type="text" class="form-control" [value]="contactInformation.email">
+                    </div>
+
+                    <div class="text-center mt-3">
+                        <button class="btn btn-outline-success">Actualizar</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container card mt-2">
+        <div class="row justify-content-md-center">
+            <div class="col-6">
+                <div class="container mt-2">
+                    <div class="w-100 border border-dark">
+                        <agm-map [latitude]="lat" [longitude]="lng" [zoom]="18" [usePanning]="true">
+                            <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+                        </agm-map>
+                    </div>
+                    <a href="https://www.google.com/maps/place/Escuela+Rep%C3%BAblica+Dominicana/@9.9112463,-84.0569227,21z/data=!4m5!3m4!1s0x0:0xc6792a2cc55520d3!8m2!3d9.9113391!4d-84.0569561"
+                        target="black">Ver en maps.</a>
+                </div>
+            </div>
+            <div class="col-4">
+                <form [formGroup]="mapForm" (ngSubmit)="updateMap()">
+                    <div class="form-group">
+                        <label>Latitud</label>
+                        <input type="text" class="form-control" formControlName="lati">
+                    </div>
+                    <div class="form-group">
+                        <label>Longitud</label>
+                        <input type="text" class="form-control" formControlName="long">
+                    </div>
+                    
+
+                    <div class="text-center mt-3">
+                        <button type="submit" class="btn btn-outline-success">Actualizar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>

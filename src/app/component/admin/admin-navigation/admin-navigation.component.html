@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary text-uppercase sticky-top">
-    <a class="navbar-brand font-weight-normal" routerLink="/admin">Administración</a>
+    <a class="navbar-brand font-weight-normal" routerLink="/admin/general-news">Administración</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -8,10 +8,18 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto font-weight-normal">
 
-
-
-            
-
+            <li class="nav-item dropdown" [routerLinkActive]="['active']">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false" routerLinkActive="active">
+                    Noticas
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item font-weight-normal" routerLink="/admin/general-news"
+                        routerLinkActive="active">Generales</a>
+                    <a class="dropdown-item font-weight-normal" routerLink="/admin/specific-news"
+                        routerLinkActive="active">Específicas</a>
+                </div>
+            </li>
 
             <li class="nav-item dropdown" [routerLinkActive]="['active']">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -20,13 +28,14 @@
                     Gestionar datos
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item font-weight-normal" routerLink="/admin/executive-crud" routerLinkActive="active"> 
+                    <a class="dropdown-item font-weight-normal" routerLink="/admin/executive-crud"
+                        routerLinkActive="active">
                         Junta de Educación
                     </a>
-                    <a class="dropdown-item font-weight-normal" routerLink="/admin-2" routerLinkActive="active">
+                    <a class="dropdown-item font-weight-normal" routerLink="/admin/galery-crud" routerLinkActive="active">
                         Galería
                     </a>
-                    <a class="dropdown-item font-weight-normal" routerLink="/admin-2" routerLinkActive="active">
+                    <a class="dropdown-item font-weight-normal" routerLink="/admin/information" routerLinkActive="active">
                         Información </a>
                 </div>
             </li>
@@ -59,19 +68,6 @@
                         sección</a>
                     <a class="dropdown-item font-weight-normal" routerLink="/admin-2" routerLinkActive="active"> Editar
                         sección</a>
-                </div>
-            </li>
-
-            <li class="nav-item dropdown" [routerLinkActive]="['active']">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false" routerLinkActive="active">
-                    Noticas
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item font-weight-normal" routerLink="/admin-2"
-                        routerLinkActive="active">Generales</a>
-                    <a class="dropdown-item font-weight-normal" routerLink="/admin-2"
-                        routerLinkActive="active">Específicas</a>
                 </div>
             </li>
 

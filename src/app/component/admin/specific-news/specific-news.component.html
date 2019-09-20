@@ -1,0 +1,28 @@
+<app-admin-navigation></app-admin-navigation>
+<div class="container mb-5 mt-2">
+    <div class="card mb-3" *ngFor="let new of news">
+        <div class="card-header">
+
+            <h4 class="card-title text-capitalize"> {{new.title}} </h4>
+        </div>
+
+        <div class="card-body">
+            <p class="card-title text-muted">Sección: <span class="text-capitalize"> {{new.section}} </span> </p>
+            <h5 class="card-title">Publicado por: <span class="text-capitalize"> {{new.author}} </span> </h5>
+            <p class="card-text">
+                {{new.description}}
+            </p>
+
+            <div class="pic_holder">
+                <img [src]="new.img" class="card-img-top">
+            </div>
+
+        </div>
+
+        <div class="card-footer text-right">
+            <small class="form-text text-muted">{{new.date}}</small>
+            <button class="btn btn-outline-danger ">Eliminar</button>
+        </div>
+
+    </div>
+</div>
