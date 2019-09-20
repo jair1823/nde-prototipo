@@ -30,7 +30,7 @@ export class UserLoginComponent implements OnInit {
       return;
     } else {
       if (this.formLogin.value.username == "admin") {
-        this.router.navigate(['admin']);
+        this.router.navigate(['admin/general-news']);
       } else {
         if (this.formLogin.value.username == "profesor") {
           this.router.navigate(['professor']);

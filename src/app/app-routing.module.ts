@@ -12,6 +12,10 @@ import { AdminUserComponent } from './component/admin/admin-user/admin-user.comp
 import { CreateProfessorComponent } from './component/admin/create-professor/create-professor.component';
 import { CreateSupervisorComponent } from './component/admin/create-supervisor/create-supervisor.component';
 import { ExecutiveCrudComponent } from './component/admin/executive-crud/executive-crud.component';
+import { InformationComponent } from './component/admin/information/information.component';
+import { GeneralNewsComponent } from './component/admin/general-news/general-news.component';
+import { SpecificNewsComponent } from './component/admin/specific-news/specific-news.component';
+import { GaleryCrudComponent } from './component/admin/galery-crud/galery-crud.component';
 
 
 const routes: Routes = [
@@ -53,10 +57,6 @@ const routes: Routes = [
     component: ProfessorUserComponent
   },
   {
-    path: 'admin',
-    component: AdminUserComponent
-  },
-  {
     path: 'admin/create-professor',
     component: CreateProfessorComponent
   },
@@ -71,6 +71,22 @@ const routes: Routes = [
   {
     path: 'admin/new-executive',
     component: AdminUserComponent
+  },
+  {
+    path: 'admin/information',
+    component: InformationComponent
+  },
+  {
+    path: 'admin/general-news',
+    component: GeneralNewsComponent
+  },
+  {
+    path: 'admin/specific-news',
+    component: SpecificNewsComponent
+  },
+  {
+    path: 'admin/galery-crud',
+    component: GaleryCrudComponent
   },
 ];
 

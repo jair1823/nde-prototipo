@@ -2,7 +2,7 @@
 
 <div class="container my-2">
     <div class="my-2">
-        <button routerLink="/admin/new-executive" class="btn btn-success ">Nuevo</button>
+        <button routerLink="/admin/new-executive" class="btn btn-outline-success ">Nuevo</button>
     </div>
 
     <div class="mb-5">
@@ -16,13 +16,20 @@
                         <h5 class="card-title"> {{ e.name }} </h5>
                         <p class="card-text"> {{ e.description }} </p>
                         <p class="card-text"><small class="text-muted">Miembro de la Junta Directiva</small></p>
-                        <div class="">
-                            <button class="btn btn-warning">Editar</button>
+
+                        <div class="row">
+                            <div class="col-2 text-center">
+                                <button class="btn btn-outline-warning btn-block">Editar</button>
+                            </div>
+                            <div class="col-2 text-center">
+                                <button class="btn btn-outline-danger btn-block">Eliminar</button>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
+
 </div>
